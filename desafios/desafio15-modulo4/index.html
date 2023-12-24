@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilos/midias.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
     </header>
@@ -38,6 +38,17 @@
                 }
                 else{
                     menu.style.display = 'block'
+                }
+            }
+        </script>
+
+        <script>
+            function mudouTamanho(){
+                if (window.innerWidth >= 481){
+                    menu.style.display = 'block'
+                }
+                else{
+                    menu.style.display = 'none'
                 }
             }
         </script>
