@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Todas as demais midias */
+
+/* Typical Device Breakpoints 
+-------------------------------------------------
+For Mobile Devices – 320px — 480px
+iPads and Tablets – 481px — 768px
+Laptops and small screen – 769px — 1024px
+Large screens and Desktops – 1025px — 1200px
+TV and Extra Large Screens – 1201px and more
+
+*/
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body{
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    main{
+        width: 90vw;
+        border: 2px solid black;
+    }
+    
+    main::after{
+        content: 'Esse site foi feito por PeNeTrAz';
+        text-decoration: none;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    #telefone{ display: none; }
+    #tablet{ display: none; }
+    #impressora { display: block; }
+    #pc { display: none; }
+    #tv{ display: none; }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    
+    #telefone{ display: none; }
+    #tablet{ display: block; }
+    #impressora { display: none; }
+    #pc { display: none; }
+    #tv{ display: none; }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    
+    #telefone{ display: none; }
+    #tablet{ display: none; }
+    #impressora { display: none; }
+    #pc { display: block; }
+    #tv{ display: none; }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    
+    #telefone{ display: none; }
+    #tablet{ display: none; }
+    #impressora { display: none; }
+    #pc { display: block; }
+    #tv{ display: none; }
+}
+@media screen and (min-width: 1201px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    
+    main{
+        width: 700px;
+    }
+
+    #telefone{ display: none; }
+    #tablet{ display: none; }
+    #impressora { display: none; }
+    #pc { display: none; }
+    #tv{ display: block }
+}
